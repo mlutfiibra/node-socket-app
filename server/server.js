@@ -10,7 +10,7 @@ var app = express();
 var server = http.createServer(app);
 var io = socketIO(server);
 
-//Serving static files in express (in the public directory)
+//Serving static files on express (in the public directory)
 app.use(express.static(publicPath));
 
 io.on('connection', (socket) => {
